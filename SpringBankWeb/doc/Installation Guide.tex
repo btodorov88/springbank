@@ -1,6 +1,7 @@
 \documentclass[a4paper, notitlepage]{article}
 %\usepackage[cm]{fullpage}
 \usepackage[pdftex]{graphicx}
+\usepackage{float}
 
 \begin{document}
 
@@ -26,7 +27,7 @@
 \section{Get the code}
 Using Git clone the repository at GitHub using the following command:
 
-\textit{git clone https://github.com/btodorov88/experiments.git}
+\textit{git clone https://github.com/btodorov88/springbank.git}
 
 \section{Build the project}
 
@@ -37,16 +38,42 @@ In order to build the project the following steps have to be executed using \tex
 \end{enumerate}
 
 \section{Deploy}
-The build procedure creates deployable \textit{war} file. It can be found at \textit{SpringBankWeb\textbackslash target\textbackslash springbank-1.0.0-BUILD-SNAPSHOT}. In order to deploy the file, one has to copy it to the \textit{webapps} folder of the Tomcat web server(for easier access the file should be renamed to \textit{springbank.war}). Once deployed the web client can be accessed at \textit{localhost:8080\textbackslash springbank} (default Tomcat configuration).
+The build procedure creates deployable \textit{war} file. It can be found at \textit{SpringBankWeb\textbackslash target\textbackslash springbank-1.0.0-BUILD-SNAPSHOT}. In order to deploy the file, one has to copy it to the \textit{webapps} folder of the Tomcat web server (for easier access the file should be renamed to \textit{springbank.war}). Once deployed the web client can be accessed at \textit{localhost:8080\textbackslash springbank} (default Tomcat configuration).
 
 
 \section{Explore the application}
 
-When the application is started it redirects to a login page for authentication. The test data defines a user \textit{btodorov} with password \textit{123}. Once successfully authenticated the user is redirected to the main page which presents all accounts (left table) and transactions (right table) associated with the authenticated user. 
+When the application is started it redirects to a login page for authentication (Figure \ref{login}) . The test data defines a user \textit{btodorov} with password \textit{123}. Once successfully authenticated the user is redirected to the main page which presents all accounts (left table) and transactions (right table) associated with the authenticated user (Figure \ref{main}). 
 
-A new bank transaction can be made by clicking on the "Create transaction" button in the menu. Next the user is asked to fill in a form providing details about the transaction. When the form is submitted it is validated to make sure all necessary fields are populated and the "From account" has enough capital. In case of success the user is redirected to the main page where the newly created transaction can be seen. 
+\bigskip
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.6\textwidth]{login_Screen.png}
+    \caption{Initial login view}
+    \label{login}
+\end{figure}
+\bigskip
+
+A new bank transaction can be made by clicking on the "Create transaction" button in the menu. Next the user is asked to fill in a form providing details about the transaction (Figure \ref{new}). When the form is submitted it is validated to make sure all necessary fields are populated and the "From account" has enough capital. In case of success the user is redirected to the main page where the newly created transaction can be seen.
+ 
+\bigskip
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{main_Screen.png}
+    \caption{Main view which summarizes the accounts and transactions associated with the authenticate user}
+    \label{main}
+\end{figure}
+\bigskip
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{new_Screen.png}
+    \caption{Component diagram illustrating the functional organization of the system}
+    \label{new}
+\end{figure}
 
 \section{Take a look at the code}
 The cloned project can be easily imported into Eclipse. In order to do that go to \textit{File\textbackslash Import \textbackslash Existing Projects into Workspace} and follow the instructions.
+
 
 \end{document}
