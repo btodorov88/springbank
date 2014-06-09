@@ -25,15 +25,15 @@
 \end{itemize}
 
 \section{Get the code}
-Using Git clone the repository at GitHub using the following command:
+Using Git clone the repository hosted at GitHub using the following command:
 
 \textit{git clone https://github.com/btodorov88/springbank.git}
 
 \section{Build the project}
 
-In order to build the project the following steps have to be executed using \textit{CMD} or alternative:
+In order to build the project the following steps have to be executed using \textit{Command Prompt} or alternative:
 \begin{enumerate}
-	\item Navigate to the SpringBankWeb in the cloned repository
+	\item Navigate to the SpringBankWeb folder in the cloned repository
 	\item Execute the \textit{mvn clean package} command
 \end{enumerate}
 
@@ -43,7 +43,7 @@ The build procedure creates deployable \textit{war} file. It can be found at \te
 
 \section{Explore the application}
 
-When the application is started it redirects to a login page for authentication (Figure \ref{login}) . The test data defines a user \textit{btodorov} with password \textit{123}. Once successfully authenticated the user is redirected to the main page which presents all accounts (left table) and transactions (right table) associated with the authenticated user (Figure \ref{main}). 
+When the application is started it redirects to a login page for authentication (Figure \ref{login}). The test data sets up user \textit{btodorov} with password \textit{123} that can be used to login. Once successfully authenticated the user is redirected to the main page which presents all accounts (left table) and transactions (right table) associated with the authenticated user (Figure \ref{main}). 
 
 \bigskip
 \begin{figure}[H]
@@ -54,13 +54,13 @@ When the application is started it redirects to a login page for authentication 
 \end{figure}
 \bigskip
 
-A new bank transaction can be made by clicking on the "Create transaction" button in the menu. Next the user is asked to fill in a form providing details about the transaction (Figure \ref{new}). When the form is submitted it is validated to make sure all necessary fields are populated and the "From account" has enough capital. In case of success the user is redirected to the main page where the newly created transaction can be seen.
+A new bank transaction can be made by clicking on the "Create transaction" button in the menu. Then the user is asked to fill in a form providing details about the transaction (Figure \ref{new}). When the form is submitted it is validated to make sure all necessary fields are populated and the "From account" has enough capital. In case of success the user is redirected to the main page where the newly created transaction can be seen.
  
 \bigskip
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.8\textwidth]{main_Screen.png}
-    \caption{Main view which summarizes the accounts and transactions associated with the authenticate user}
+    \includegraphics[width=0.9\textwidth]{main_Screen.png}
+    \caption{The main view which summarizes the accounts and transactions associated with the authenticate user}
     \label{main}
 \end{figure}
 \bigskip
@@ -68,7 +68,7 @@ A new bank transaction can be made by clicking on the "Create transaction" butto
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.8\textwidth]{new_Screen.png}
-    \caption{Component diagram illustrating the functional organization of the system}
+    \caption{The form that has to be filled in in order to create a new transaction}
     \label{new}
 \end{figure}
 
